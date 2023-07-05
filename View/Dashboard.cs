@@ -14,6 +14,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
+using System.Security;
+
 
 namespace Gammis
 {
@@ -50,7 +52,7 @@ namespace Gammis
         private void ServerTimer_Tick(object sender, EventArgs e)
         {
             this.ServerTime.Text = DateTime.Now.ToString("HH:mm:ss");
-            this.DateAndTime.Text = DateTime.Now.ToString("dddd, MMMM dd, yyyy");
+            this.DateAndTime.Text = DateTime.Now.ToString("dddd | dd MMMM, yyyy");
 
 
 
@@ -79,7 +81,9 @@ namespace Gammis
 
         private void Gaming_Click(object sender, EventArgs e)
         {
+            AdsPanel.Visible = false;
             bunifuPages1.PageName = "tabPage2";
+
 
         }
 
@@ -261,14 +265,51 @@ namespace Gammis
             }
         }
 
-        private void AuthenticationBox_KeyPress(object sender, KeyPressEventArgs e)
+
+        private void ResetForm_Click(object sender, EventArgs e)
         {
-                // Password masking for added security
-                AuthenticationBox.ForeColor = Color.White;
-                AuthenticationBox.PasswordChar = '*';
-    
+            SetPlaceholderText();
+            GameToPlayType.ResetText();
+            GamerID.ResetText();
+            BranchCode.ResetText();
+            CashierID.ResetText();
+            GamerCenterIDTextBox.ResetText();
+
+            bunifuSnackbar1.Show(this, "Resetting form successfully!",
+            Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Information, 2000, "",
+            Bunifu.UI.WinForms.BunifuSnackbar.Positions.BottomLeft,
+            Bunifu.UI.WinForms.BunifuSnackbar.Hosts.FormOwner);
+            HideViewPaymentReview.Visible = true;
+            SubmitToPreview.Visible = true;
+            ResetForm.Visible = false;
+            MoneyPay.Visible = false;
+            bunifuPages1.PageName = "tabPage6";
+
+
         }
 
+      
 
+        private void AuthenticationBox_Leave(object sender, EventArgs e)
+        {
+            if (AuthenticationBox.Text.Length == 0)
+            {
+                SetPlaceholderText();
+            }
+        }
+        private void SetPlaceholderText()
+        {
+            // Replace this placeholder text with whatever you want to show as a prompt.
+            AuthenticationBox.PlaceholderText = "Enter Passcode";
+            AuthenticationBox.PasswordChar = '\0'; 
+            // Reset PasswordChar to show the actual characters.
+        }
+
+        private void AuthenticationBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Password masking for added security
+            AuthenticationBox.ForeColor = Color.White;
+            AuthenticationBox.PasswordChar = '*';
+        }
     }
 }

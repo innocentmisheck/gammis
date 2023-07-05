@@ -55,13 +55,19 @@
             this.bunifuLabel5 = new Bunifu.UI.WinForms.BunifuLabel();
             this.WaitingMessage = new Bunifu.UI.WinForms.BunifuLabel();
             this.LoginButton = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
-            this.iconPictureBox4 = new FontAwesome.Sharp.IconPictureBox();
+            this.LoginSuccess = new FontAwesome.Sharp.IconPictureBox();
             this.bunifuSnackbar1 = new Bunifu.UI.WinForms.BunifuSnackbar(this.components);
+            this.Validation = new System.Windows.Forms.Timer(this.components);
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.LoginFailed = new FontAwesome.Sharp.IconPictureBox();
+            this.SubmitAccount = new FontAwesome.Sharp.IconPictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LoginSuccess)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LoginFailed)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SubmitAccount)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuFormCaptionButton1
@@ -105,6 +111,7 @@
             this.bunifuFormCaptionButton1.ShowBorders = true;
             this.bunifuFormCaptionButton1.Size = new System.Drawing.Size(48, 42);
             this.bunifuFormCaptionButton1.TabIndex = 0;
+            this.toolTip1.SetToolTip(this.bunifuFormCaptionButton1, "Exit");
             this.bunifuFormCaptionButton1.Click += new System.EventHandler(this.Exit);
             // 
             // bunifuPictureBox1
@@ -294,13 +301,13 @@
             this.IDLoader.DashWidth = 0.5F;
             this.IDLoader.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.IDLoader.Image = null;
-            this.IDLoader.Location = new System.Drawing.Point(224, 240);
+            this.IDLoader.Location = new System.Drawing.Point(392, 192);
             this.IDLoader.Name = "IDLoader";
             this.IDLoader.NoRounding = false;
             this.IDLoader.Preset = Bunifu.UI.WinForms.BunifuLoader.StylePresets.Dashed;
             this.IDLoader.RingStyle = Bunifu.UI.WinForms.BunifuLoader.RingStyles.Dashed;
             this.IDLoader.ShowText = false;
-            this.IDLoader.Size = new System.Drawing.Size(30, 30);
+            this.IDLoader.Size = new System.Drawing.Size(32, 32);
             this.IDLoader.Speed = 7;
             this.IDLoader.TabIndex = 8;
             this.IDLoader.TextPadding = new System.Windows.Forms.Padding(0);
@@ -411,6 +418,7 @@
             this.Passcode.UseSystemPasswordChar = false;
             this.Passcode.WordWrap = true;
             this.Passcode.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Passcode_KeyPress);
+            this.Passcode.Leave += new System.EventHandler(this.Passcode_Leave);
             // 
             // bunifuLabel5
             // 
@@ -439,9 +447,9 @@
             this.WaitingMessage.Location = new System.Drawing.Point(32, 248);
             this.WaitingMessage.Name = "WaitingMessage";
             this.WaitingMessage.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.WaitingMessage.Size = new System.Drawing.Size(177, 19);
+            this.WaitingMessage.Size = new System.Drawing.Size(254, 19);
             this.WaitingMessage.TabIndex = 14;
-            this.WaitingMessage.Text = "Waiting for your admin ID";
+            this.WaitingMessage.Text = "Waiting for your the staff-gamertag !";
             this.WaitingMessage.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.WaitingMessage.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
@@ -528,6 +536,7 @@
             this.LoginButton.OnPressedState.IconRightImage = null;
             this.LoginButton.Size = new System.Drawing.Size(296, 48);
             this.LoginButton.TabIndex = 3;
+            this.LoginButton.TabStop = false;
             this.LoginButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.LoginButton.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
             this.LoginButton.TextMarginLeft = 0;
@@ -535,18 +544,18 @@
             this.LoginButton.UseDefaultRadiusAndThickness = true;
             this.LoginButton.Click += new System.EventHandler(this.LoginButton_Click);
             // 
-            // iconPictureBox4
+            // LoginSuccess
             // 
-            this.iconPictureBox4.BackColor = System.Drawing.Color.Transparent;
-            this.iconPictureBox4.IconChar = FontAwesome.Sharp.IconChar.ArrowRightFromFile;
-            this.iconPictureBox4.IconColor = System.Drawing.Color.White;
-            this.iconPictureBox4.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBox4.IconSize = 48;
-            this.iconPictureBox4.Location = new System.Drawing.Point(336, 416);
-            this.iconPictureBox4.Name = "iconPictureBox4";
-            this.iconPictureBox4.Size = new System.Drawing.Size(48, 48);
-            this.iconPictureBox4.TabIndex = 17;
-            this.iconPictureBox4.TabStop = false;
+            this.LoginSuccess.BackColor = System.Drawing.Color.Transparent;
+            this.LoginSuccess.IconChar = FontAwesome.Sharp.IconChar.FileCircleCheck;
+            this.LoginSuccess.IconColor = System.Drawing.Color.White;
+            this.LoginSuccess.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.LoginSuccess.IconSize = 48;
+            this.LoginSuccess.Location = new System.Drawing.Point(336, 416);
+            this.LoginSuccess.Name = "LoginSuccess";
+            this.LoginSuccess.Size = new System.Drawing.Size(48, 48);
+            this.LoginSuccess.TabIndex = 17;
+            this.LoginSuccess.TabStop = false;
             // 
             // bunifuSnackbar1
             // 
@@ -618,13 +627,45 @@
             this.bunifuSnackbar1.WarningOptions.IconLeftMargin = 12;
             this.bunifuSnackbar1.ZoomCloseIcon = true;
             // 
+            // Validation
+            // 
+           
+            // 
+            // LoginFailed
+            // 
+            this.LoginFailed.BackColor = System.Drawing.Color.Transparent;
+            this.LoginFailed.IconChar = FontAwesome.Sharp.IconChar.FileCircleXmark;
+            this.LoginFailed.IconColor = System.Drawing.Color.White;
+            this.LoginFailed.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.LoginFailed.IconSize = 48;
+            this.LoginFailed.Location = new System.Drawing.Point(336, 416);
+            this.LoginFailed.Name = "LoginFailed";
+            this.LoginFailed.Size = new System.Drawing.Size(48, 48);
+            this.LoginFailed.TabIndex = 18;
+            this.LoginFailed.TabStop = false;
+            // 
+            // SubmitAccount
+            // 
+            this.SubmitAccount.BackColor = System.Drawing.Color.Transparent;
+            this.SubmitAccount.IconChar = FontAwesome.Sharp.IconChar.ArrowRightFromFile;
+            this.SubmitAccount.IconColor = System.Drawing.Color.White;
+            this.SubmitAccount.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.SubmitAccount.IconSize = 48;
+            this.SubmitAccount.Location = new System.Drawing.Point(336, 416);
+            this.SubmitAccount.Name = "SubmitAccount";
+            this.SubmitAccount.Size = new System.Drawing.Size(48, 48);
+            this.SubmitAccount.TabIndex = 19;
+            this.SubmitAccount.TabStop = false;
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(47)))), ((int)(((byte)(47)))));
             this.ClientSize = new System.Drawing.Size(625, 650);
-            this.Controls.Add(this.iconPictureBox4);
+            this.Controls.Add(this.SubmitAccount);
+            this.Controls.Add(this.LoginFailed);
+            this.Controls.Add(this.LoginSuccess);
             this.Controls.Add(this.LoginButton);
             this.Controls.Add(this.WaitingMessage);
             this.Controls.Add(this.iconPictureBox2);
@@ -649,7 +690,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LoginSuccess)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LoginFailed)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SubmitAccount)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -672,7 +715,11 @@
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel5;
         private Bunifu.UI.WinForms.BunifuLabel WaitingMessage;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 LoginButton;
-        private FontAwesome.Sharp.IconPictureBox iconPictureBox4;
+        private FontAwesome.Sharp.IconPictureBox LoginSuccess;
         private Bunifu.UI.WinForms.BunifuSnackbar bunifuSnackbar1;
+        private System.Windows.Forms.Timer Validation;
+        private System.Windows.Forms.ToolTip toolTip1;
+        private FontAwesome.Sharp.IconPictureBox LoginFailed;
+        private FontAwesome.Sharp.IconPictureBox SubmitAccount;
     }
 }

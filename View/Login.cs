@@ -17,6 +17,7 @@ namespace Gammis
         public Login()
         {
             InitializeComponent();
+            Validation.Start();
             bunifuSnackbar1.Show(this, "Server connection initialized successfully!",
             Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Success, 2000, "",
             Bunifu.UI.WinForms.BunifuSnackbar.Positions.BottomLeft,
@@ -54,25 +55,23 @@ namespace Gammis
                             Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Success, 1000, "",
                             Bunifu.UI.WinForms.BunifuSnackbar.Positions.TopCenter,
                             Bunifu.UI.WinForms.BunifuSnackbar.Hosts.FormOwner);
-                            WaitingMessage.ForeColor = Color.DarkGreen;
-                            IDLoader.ForeColor = Color.DarkGreen;
-                            WaitingMessage.Text = "Authentication Inprocess";
-                            Dashboard dashboard = new Dashboard();
-                            dashboard.Show();
-                            this.Close();
-                            return;
-
+                            WaitingMessage.ForeColor = Color.White;
+                            WaitingMessage.Text = "Authentication Inprocess!";
+                            SubmitAccount.Visible = false;
+                            LoginFailed.Visible = false;
+                            LoginSuccess.IconColor = Color.DarkGreen;
                         }
                     
                         else
                         {
-                            bunifuSnackbar1.Show(this, "Check the Password / Online ID !",
+                            bunifuSnackbar1.Show(this, "Check the Password OR Online ID !",
                             Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Error, 1000, "",
                             Bunifu.UI.WinForms.BunifuSnackbar.Positions.BottomLeft,
                             Bunifu.UI.WinForms.BunifuSnackbar.Hosts.FormOwner);
-                            WaitingMessage.ForeColor = Color.DarkRed;
-                            IDLoader.ForeColor = Color.DarkRed;
+                            WaitingMessage.ForeColor = Color.White;
+                            IDLoader.ForeColor = Color.White;
                             WaitingMessage.Text = "Something went wrong!";
+                            SubmitAccount.Visible= false;
                             return; 
                         }
                 }
@@ -99,6 +98,38 @@ namespace Gammis
         
         }
 
-       
+        private void Passcode_Leave(object sender, EventArgs e)
+        {
+            if (Passcode.Text.Length == 0)
+            {
+                SetPlaceholderText();
+            }
+        }
+        private void SetPlaceholderText()
+        {
+            // Replace this placeholder text with whatever you want to show as a prompt.
+            Passcode.PlaceholderText= "Enter Passcode";
+            Passcode.PasswordChar = '\0'; // Reset PasswordChar to show the actual characters.
+        }
+
+        private void Validation_Tick(object sender, EventArgs e)
+        {
+
+            Validation.Interval = 1000;
+
+            
+                // Stop the timer
+                Validation.Stop();
+
+                // Show the Dashboard form
+                Dashboard dashboard = new Dashboard();
+                dashboard.Show();
+
+                // Close the current form
+                this.Close();
+
+            // Start the timer
+            Validation.Start();
+        }
     }
 }
