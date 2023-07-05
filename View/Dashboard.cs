@@ -1,5 +1,4 @@
 ﻿using Bunifu.UI.WinForms;
-using crypto;
 using MySql.Data.MySqlClient;
 using RestSharp;
 using System;
@@ -22,7 +21,6 @@ namespace Gammis
     public partial class Dashboard : Form
     {
 
-        
         public Dashboard()
         {
             InitializeComponent();
@@ -36,7 +34,14 @@ namespace Gammis
             Bunifu.UI.WinForms.BunifuSnackbar.Hosts.FormOwner);
             GameSessionTimer.Start();
 
-           
+            // Sample data
+            for (int i = 0; i < 100; i++)
+            {
+                bunifuContentDataGridView2.Rows.Add(new object[] 
+                {
+                    imageList1.Images[0]
+                });
+            }
         }
          
        
@@ -76,14 +81,17 @@ namespace Gammis
 
         private void Home_Click(object sender, EventArgs e)
         {
-            bunifuPages1.PageName = "tabPage1";
+            Routes.HomePanelRoute.GoToHomePanel(bunifuPages1);
+            AdsPanel.Visible = true;
+            OperationsBar.Visible = false;
         }
 
         private void Gaming_Click(object sender, EventArgs e)
         {
             AdsPanel.Visible = false;
-            bunifuPages1.PageName = "tabPage2";
-
+            OperationsBar.Visible = true;
+            Routes.GamingPanelRoute.GoToGamingPanel(bunifuPages1);
+            return;
 
         }
 
@@ -101,7 +109,7 @@ namespace Gammis
 
         private void GamersPanel_Click(object sender, EventArgs e)
         {
-            bunifuPages1.PageName = "tabPage5";
+            Routes.GamingPanelRoute.GoToGamingPanel(bunifuPages1);
 
         }
 
@@ -112,6 +120,8 @@ namespace Gammis
             Bunifu.UI.WinForms.BunifuSnackbar.Positions.BottomLeft,
             Bunifu.UI.WinForms.BunifuSnackbar.Hosts.FormOwner);
             bunifuPages1.PageName = "tabPage6";
+            AdsPanel.Visible = true;
+            OperationsBar.Visible = false;
 
         }
 
@@ -311,5 +321,7 @@ namespace Gammis
             AuthenticationBox.ForeColor = Color.White;
             AuthenticationBox.PasswordChar = '*';
         }
+
+ 
     }
 }

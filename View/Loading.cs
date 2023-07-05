@@ -16,6 +16,7 @@ namespace gammis
 {
     public partial class Loading : Form
     {
+        [Obsolete]
         public Loading()
         {
             InitializeComponent();
@@ -24,8 +25,7 @@ namespace gammis
 
         }
 
-
-
+        [Obsolete]
         public void Timer1_Tick(object sender, EventArgs e)
         {
             if(timer1.Interval <= 5000)

@@ -1,4 +1,5 @@
 ﻿using gammis;
+using Gammis.Helpers;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,11 +14,15 @@ namespace Gammis
 {
     public partial class Login : Form
     {
-        readonly Authentication  security = new Authentication();
+
+        private readonly AuthenticationHelper authHelper;
+
+        [Obsolete]
         public Login()
         {
             InitializeComponent();
             Validation.Start();
+            authHelper = new AuthenticationHelper();
             bunifuSnackbar1.Show(this, "Server connection initialized successfully!",
             Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Success, 2000, "",
             Bunifu.UI.WinForms.BunifuSnackbar.Positions.BottomLeft,
@@ -30,8 +35,10 @@ namespace Gammis
             Application.Exit();
         }
 
+        [Obsolete("Use newMethod instead", false)]
         private void LoginButton_Click(object sender, EventArgs e)
         {
+
             if (string.IsNullOrEmpty(OnlineID.Text)||(string.IsNullOrEmpty(Passcode.Text)))
             {
                   bunifuSnackbar1.Show(this, "Please fill all REQUIRED fields!",
@@ -46,10 +53,12 @@ namespace Gammis
                 try
                 {
                     
-                   
+
                         string username = OnlineID.Text;
                         string password = Passcode.Text;
-                        if (security.IDAuthentication(username, password))
+
+                        bool isAuthenticated = authHelper.Authenticate(username, password);
+                        if(isAuthenticated)
                         {
                             bunifuSnackbar1.Show(this, "Please wait for validation!",
                             Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Success, 1000, "",
@@ -60,6 +69,7 @@ namespace Gammis
                             SubmitAccount.Visible = false;
                             LoginFailed.Visible = false;
                             LoginSuccess.IconColor = Color.DarkGreen;
+                            ShowDashboard();
                         }
                     
                         else
@@ -112,24 +122,15 @@ namespace Gammis
             Passcode.PasswordChar = '\0'; // Reset PasswordChar to show the actual characters.
         }
 
-        private void Validation_Tick(object sender, EventArgs e)
+        [Obsolete("Use newMethod instead", false)]
+        private void ShowDashboard()
         {
+            // Show the Dashboard form
+            Dashboard dashboard = authHelper.GetDashboard();
+            dashboard.Show();
 
-            Validation.Interval = 1000;
-
-            
-                // Stop the timer
-                Validation.Stop();
-
-                // Show the Dashboard form
-                Dashboard dashboard = new Dashboard();
-                dashboard.Show();
-
-                // Close the current form
-                this.Close();
-
-            // Start the timer
-            Validation.Start();
+            // Close the current form
+            this.Close();
         }
     }
 }
