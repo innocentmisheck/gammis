@@ -271,11 +271,15 @@ namespace Gammis
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LICENSES = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ModificationDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Statistics = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Status = new System.Windows.Forms.DataGridViewImageColumn();
+            this.Operations = new System.Windows.Forms.DataGridViewImageColumn();
+            this.DeleteOperations = new System.Windows.Forms.ImageList(this.components);
+            this.OpenOperations = new System.Windows.Forms.ImageList(this.components);
             this.bunifuGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox9)).BeginInit();
@@ -3266,7 +3270,7 @@ namespace Gammis
             // 
             // bunifuContentDataGridView2
             // 
-            this.bunifuContentDataGridView2.AllowCustomTheming = false;
+            this.bunifuContentDataGridView2.AllowCustomTheming = true;
             this.bunifuContentDataGridView2.AllowUserToOrderColumns = true;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(48)))), ((int)(((byte)(52)))));
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Candara", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -3293,11 +3297,13 @@ namespace Gammis
             this.bunifuContentDataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2,
+            this.LICENSES,
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4,
             this.ModificationDate,
             this.Statistics,
-            this.Status});
+            this.Status,
+            this.Operations});
             this.bunifuContentDataGridView2.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(48)))), ((int)(((byte)(52)))));
             this.bunifuContentDataGridView2.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
             this.bunifuContentDataGridView2.CurrentTheme.AlternatingRowsStyle.ForeColor = System.Drawing.Color.White;
@@ -3306,13 +3312,13 @@ namespace Gammis
             this.bunifuContentDataGridView2.CurrentTheme.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(16)))), ((int)(((byte)(18)))));
             this.bunifuContentDataGridView2.CurrentTheme.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(56)))), ((int)(((byte)(62)))));
             this.bunifuContentDataGridView2.CurrentTheme.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(16)))), ((int)(((byte)(18)))));
-            this.bunifuContentDataGridView2.CurrentTheme.HeaderStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+            this.bunifuContentDataGridView2.CurrentTheme.HeaderStyle.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuContentDataGridView2.CurrentTheme.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.bunifuContentDataGridView2.CurrentTheme.HeaderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(63)))), ((int)(((byte)(65)))));
             this.bunifuContentDataGridView2.CurrentTheme.HeaderStyle.SelectionForeColor = System.Drawing.Color.White;
             this.bunifuContentDataGridView2.CurrentTheme.Name = null;
             this.bunifuContentDataGridView2.CurrentTheme.RowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(37)))), ((int)(((byte)(41)))));
-            this.bunifuContentDataGridView2.CurrentTheme.RowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.bunifuContentDataGridView2.CurrentTheme.RowsStyle.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuContentDataGridView2.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.White;
             this.bunifuContentDataGridView2.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(117)))), ((int)(((byte)(119)))));
             this.bunifuContentDataGridView2.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.WhiteSmoke;
@@ -3331,9 +3337,8 @@ namespace Gammis
             this.bunifuContentDataGridView2.HeaderBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(16)))), ((int)(((byte)(18)))));
             this.bunifuContentDataGridView2.HeaderBgColor = System.Drawing.Color.DodgerBlue;
             this.bunifuContentDataGridView2.HeaderForeColor = System.Drawing.Color.White;
-            this.bunifuContentDataGridView2.Location = new System.Drawing.Point(32, 104);
+            this.bunifuContentDataGridView2.Location = new System.Drawing.Point(8, 104);
             this.bunifuContentDataGridView2.Name = "bunifuContentDataGridView2";
-            this.bunifuContentDataGridView2.ReadOnly = true;
             this.bunifuContentDataGridView2.RightToLeft = System.Windows.Forms.RightToLeft.No;
             dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
@@ -5878,7 +5883,6 @@ namespace Gammis
             this.dataGridViewTextBoxColumn1.Description = "Content Image";
             this.dataGridViewTextBoxColumn1.HeaderText = "ICON";
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
             this.dataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridViewTextBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
@@ -5886,39 +5890,57 @@ namespace Gammis
             // 
             this.dataGridViewTextBoxColumn2.HeaderText = "FULL NAME";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // LICENSES
+            // 
+            this.LICENSES.HeaderText = "LICENSES";
+            this.LICENSES.Name = "LICENSES";
             // 
             // dataGridViewTextBoxColumn3
             // 
             this.dataGridViewTextBoxColumn3.HeaderText = "AVAILABLE AT";
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn4
             // 
             this.dataGridViewTextBoxColumn4.HeaderText = "CATEGORIES";
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
             // 
             // ModificationDate
             // 
-            this.ModificationDate.HeaderText = "MODIFICATION ON";
+            this.ModificationDate.HeaderText = "MODIFIED ON";
             this.ModificationDate.Name = "ModificationDate";
-            this.ModificationDate.ReadOnly = true;
             // 
             // Statistics
             // 
             this.Statistics.HeaderText = "STATISTICS";
             this.Statistics.Name = "Statistics";
-            this.Statistics.ReadOnly = true;
             // 
             // Status
             // 
             this.Status.HeaderText = "STATUS";
             this.Status.Name = "Status";
-            this.Status.ReadOnly = true;
             this.Status.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Status.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // Operations
+            // 
+            this.Operations.HeaderText = "OPERATIONS";
+            this.Operations.Name = "Operations";
+            this.Operations.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Operations.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // DeleteOperations
+            // 
+            this.DeleteOperations.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("DeleteOperations.ImageStream")));
+            this.DeleteOperations.TransparentColor = System.Drawing.Color.Transparent;
+            this.DeleteOperations.Images.SetKeyName(0, "Remove.png");
+            // 
+            // OpenOperations
+            // 
+            this.OpenOperations.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("OpenOperations.ImageStream")));
+            this.OpenOperations.TransparentColor = System.Drawing.Color.Transparent;
+            this.OpenOperations.Images.SetKeyName(0, "Opened Folder.png");
             // 
             // Dashboard
             // 
@@ -6219,10 +6241,14 @@ namespace Gammis
         private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn LICENSES;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn ModificationDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn Statistics;
         private System.Windows.Forms.DataGridViewImageColumn Status;
+        private System.Windows.Forms.DataGridViewImageColumn Operations;
+        private System.Windows.Forms.ImageList DeleteOperations;
+        private System.Windows.Forms.ImageList OpenOperations;
     }
 }

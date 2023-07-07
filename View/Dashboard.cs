@@ -37,15 +37,14 @@ namespace Gammis
             // Sample data
             for (int i = 0; i < 100; i++)
             {
-                bunifuContentDataGridView2.Rows.Add(new object[] 
+                bunifuContentDataGridView2.Rows.Add(new object[]
                 {
                     imageList1.Images[0]
-                });
+                  
+                }) ;
             }
         }
-         
-       
-
+  
         private void LogOut_Click(object sender, EventArgs e)
         {
             Login login = new Login();
@@ -245,9 +244,6 @@ namespace Gammis
                         Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Information, 6000, "",
                         Bunifu.UI.WinForms.BunifuSnackbar.Positions.BottomCenter,
                         Bunifu.UI.WinForms.BunifuSnackbar.Hosts.FormOwner);
-
-                        
-
                     }
                     else
                     {
@@ -256,8 +252,6 @@ namespace Gammis
                        Bunifu.UI.WinForms.BunifuSnackbar.Positions.BottomCenter,
                        Bunifu.UI.WinForms.BunifuSnackbar.Hosts.FormOwner);
                     }
-
-
                 }
                 catch(Exception err)
                 {
@@ -294,8 +288,6 @@ namespace Gammis
             ResetForm.Visible = false;
             MoneyPay.Visible = false;
             bunifuPages1.PageName = "tabPage6";
-
-
         }
 
       
