@@ -631,8 +631,9 @@
             // LoginFailed
             // 
             this.LoginFailed.BackColor = System.Drawing.Color.Transparent;
+            this.LoginFailed.ForeColor = System.Drawing.Color.DarkRed;
             this.LoginFailed.IconChar = FontAwesome.Sharp.IconChar.FileCircleXmark;
-            this.LoginFailed.IconColor = System.Drawing.Color.White;
+            this.LoginFailed.IconColor = System.Drawing.Color.DarkRed;
             this.LoginFailed.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.LoginFailed.IconSize = 48;
             this.LoginFailed.Location = new System.Drawing.Point(336, 416);

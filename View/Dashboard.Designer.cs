@@ -50,8 +50,9 @@ namespace Gammis
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
@@ -84,6 +85,7 @@ namespace Gammis
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties26 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties27 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties28 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.bunifuGradientPanel1 = new Bunifu.UI.WinForms.BunifuGradientPanel();
             this.iconPictureBox10 = new FontAwesome.Sharp.IconPictureBox();
             this.iconPictureBox9 = new FontAwesome.Sharp.IconPictureBox();
@@ -2220,7 +2222,7 @@ namespace Gammis
             this.tabPage1.Location = new System.Drawing.Point(4, 4);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1080, 486);
+            this.tabPage1.Size = new System.Drawing.Size(1088, 486);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "tabPage1";
             this.bunifuToolTip1.SetToolTip(this.tabPage1, "");
@@ -3281,7 +3283,7 @@ namespace Gammis
             this.bunifuContentDataGridView2.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(16)))), ((int)(((byte)(18)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(63)))), ((int)(((byte)(65)))));
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
@@ -3315,36 +3317,46 @@ namespace Gammis
             this.bunifuContentDataGridView2.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(117)))), ((int)(((byte)(119)))));
             this.bunifuContentDataGridView2.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.WhiteSmoke;
             this.bunifuTransition1.SetDecoration(this.bunifuContentDataGridView2, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(37)))), ((int)(((byte)(41)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(117)))), ((int)(((byte)(119)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.bunifuContentDataGridView2.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(37)))), ((int)(((byte)(41)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(117)))), ((int)(((byte)(119)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.bunifuContentDataGridView2.DefaultCellStyle = dataGridViewCellStyle7;
+            this.bunifuContentDataGridView2.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.bunifuContentDataGridView2.EnableHeadersVisualStyles = false;
-            this.bunifuContentDataGridView2.GridColor = System.Drawing.Color.White;
+            this.bunifuContentDataGridView2.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(56)))), ((int)(((byte)(62)))));
             this.bunifuContentDataGridView2.HeaderBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(16)))), ((int)(((byte)(18)))));
             this.bunifuContentDataGridView2.HeaderBgColor = System.Drawing.Color.DodgerBlue;
             this.bunifuContentDataGridView2.HeaderForeColor = System.Drawing.Color.White;
             this.bunifuContentDataGridView2.Location = new System.Drawing.Point(32, 104);
             this.bunifuContentDataGridView2.Name = "bunifuContentDataGridView2";
+            this.bunifuContentDataGridView2.ReadOnly = true;
             this.bunifuContentDataGridView2.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.bunifuContentDataGridView2.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.bunifuContentDataGridView2.RowHeadersVisible = false;
             this.bunifuContentDataGridView2.RowHeadersWidth = 4;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(37)))), ((int)(((byte)(41)))));
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Candara", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.Padding = new System.Windows.Forms.Padding(5);
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(37)))), ((int)(((byte)(41)))));
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.White;
-            this.bunifuContentDataGridView2.RowsDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(37)))), ((int)(((byte)(41)))));
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Candara", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.Padding = new System.Windows.Forms.Padding(5);
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(37)))), ((int)(((byte)(41)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.White;
+            this.bunifuContentDataGridView2.RowsDefaultCellStyle = dataGridViewCellStyle9;
             this.bunifuContentDataGridView2.RowTemplate.Height = 40;
             this.bunifuContentDataGridView2.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.bunifuContentDataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.bunifuContentDataGridView2.Size = new System.Drawing.Size(1040, 384);
-            this.bunifuContentDataGridView2.TabIndex = 34;
+            this.bunifuContentDataGridView2.TabIndex = 9;
             this.bunifuContentDataGridView2.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Dark;
             this.bunifuToolTip1.SetToolTip(this.bunifuContentDataGridView2, "");
             this.bunifuToolTip1.SetToolTipIcon(this.bunifuContentDataGridView2, null);
@@ -3439,7 +3451,7 @@ namespace Gammis
             this.SearchContent.ShortcutsEnabled = true;
             this.SearchContent.Size = new System.Drawing.Size(200, 32);
             this.SearchContent.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
-            this.SearchContent.TabIndex = 32;
+            this.SearchContent.TabIndex = 7;
             this.SearchContent.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.SearchContent.TextMarginBottom = 0;
             this.SearchContent.TextMarginLeft = 3;
@@ -3491,7 +3503,7 @@ namespace Gammis
             this.bunifuDropdown2.Location = new System.Drawing.Point(392, 32);
             this.bunifuDropdown2.Name = "bunifuDropdown2";
             this.bunifuDropdown2.Size = new System.Drawing.Size(176, 32);
-            this.bunifuDropdown2.TabIndex = 31;
+            this.bunifuDropdown2.TabIndex = 6;
             this.bunifuDropdown2.Text = "Select categories";
             this.bunifuDropdown2.TextAlignment = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
             this.bunifuDropdown2.TextLeftMargin = 5;
@@ -3539,7 +3551,7 @@ namespace Gammis
             this.bunifuDropdown1.Location = new System.Drawing.Point(208, 32);
             this.bunifuDropdown1.Name = "bunifuDropdown1";
             this.bunifuDropdown1.Size = new System.Drawing.Size(152, 32);
-            this.bunifuDropdown1.TabIndex = 30;
+            this.bunifuDropdown1.TabIndex = 5;
             this.bunifuDropdown1.Text = "Select center";
             this.bunifuDropdown1.TextAlignment = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
             this.bunifuDropdown1.TextLeftMargin = 5;
@@ -3587,7 +3599,7 @@ namespace Gammis
             this.ChooseAction.Location = new System.Drawing.Point(32, 32);
             this.ChooseAction.Name = "ChooseAction";
             this.ChooseAction.Size = new System.Drawing.Size(152, 32);
-            this.ChooseAction.TabIndex = 29;
+            this.ChooseAction.TabIndex = 4;
             this.ChooseAction.Text = "Choose action";
             this.ChooseAction.TextAlignment = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
             this.ChooseAction.TextLeftMargin = 5;
@@ -3678,7 +3690,7 @@ namespace Gammis
             this.AddContent.OnPressedState.IconLeftImage = null;
             this.AddContent.OnPressedState.IconRightImage = null;
             this.AddContent.Size = new System.Drawing.Size(104, 32);
-            this.AddContent.TabIndex = 28;
+            this.AddContent.TabIndex = 8;
             this.AddContent.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.AddContent.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
             this.AddContent.TextMarginLeft = 0;
@@ -3695,7 +3707,7 @@ namespace Gammis
             this.tabPage3.Location = new System.Drawing.Point(4, 4);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(1080, 486);
+            this.tabPage3.Size = new System.Drawing.Size(1088, 486);
             this.tabPage3.TabIndex = 5;
             this.tabPage3.Text = "tabPage3";
             this.bunifuToolTip1.SetToolTip(this.tabPage3, "");
@@ -3709,7 +3721,7 @@ namespace Gammis
             this.tabPage4.Location = new System.Drawing.Point(4, 4);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(1080, 486);
+            this.tabPage4.Size = new System.Drawing.Size(1088, 486);
             this.tabPage4.TabIndex = 6;
             this.tabPage4.Text = "tabPage4";
             this.bunifuToolTip1.SetToolTip(this.tabPage4, "");
@@ -3723,7 +3735,7 @@ namespace Gammis
             this.tabPage5.Location = new System.Drawing.Point(4, 4);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(1080, 486);
+            this.tabPage5.Size = new System.Drawing.Size(1088, 486);
             this.tabPage5.TabIndex = 7;
             this.tabPage5.Text = "tabPage5";
             this.bunifuToolTip1.SetToolTip(this.tabPage5, "");
@@ -3737,7 +3749,7 @@ namespace Gammis
             this.tabPage6.Location = new System.Drawing.Point(4, 4);
             this.tabPage6.Name = "tabPage6";
             this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage6.Size = new System.Drawing.Size(1080, 486);
+            this.tabPage6.Size = new System.Drawing.Size(1088, 486);
             this.tabPage6.TabIndex = 8;
             this.tabPage6.Text = "tabPage6";
             this.bunifuToolTip1.SetToolTip(this.tabPage6, "");
@@ -5532,7 +5544,7 @@ namespace Gammis
             this.linkLabel3.Location = new System.Drawing.Point(264, 48);
             this.linkLabel3.Name = "linkLabel3";
             this.linkLabel3.Size = new System.Drawing.Size(106, 19);
-            this.linkLabel3.TabIndex = 35;
+            this.linkLabel3.TabIndex = 3;
             this.linkLabel3.TabStop = true;
             this.linkLabel3.Text = "Startup errors";
             this.bunifuToolTip1.SetToolTip(this.linkLabel3, "Starup errors");
@@ -5552,7 +5564,7 @@ namespace Gammis
             this.linkLabel2.Location = new System.Drawing.Point(160, 48);
             this.linkLabel2.Name = "linkLabel2";
             this.linkLabel2.Size = new System.Drawing.Size(61, 19);
-            this.linkLabel2.TabIndex = 34;
+            this.linkLabel2.TabIndex = 2;
             this.linkLabel2.TabStop = true;
             this.linkLabel2.Text = "Archive";
             this.bunifuToolTip1.SetToolTip(this.linkLabel2, "Archive");
@@ -5572,7 +5584,7 @@ namespace Gammis
             this.linkLabel1.Location = new System.Drawing.Point(32, 48);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(86, 19);
-            this.linkLabel1.TabIndex = 33;
+            this.linkLabel1.TabIndex = 1;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "All Content";
             this.bunifuToolTip1.SetToolTip(this.linkLabel1, "All Content");
@@ -5855,7 +5867,16 @@ namespace Gammis
             // 
             // dataGridViewTextBoxColumn1
             // 
-            this.dataGridViewTextBoxColumn1.HeaderText = "Icon";
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle6.NullValue")));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
+            this.dataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle6;
+            this.dataGridViewTextBoxColumn1.Description = "Content Image";
+            this.dataGridViewTextBoxColumn1.HeaderText = "ICON";
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             this.dataGridViewTextBoxColumn1.ReadOnly = true;
             this.dataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
@@ -5863,36 +5884,39 @@ namespace Gammis
             // 
             // dataGridViewTextBoxColumn2
             // 
-            this.dataGridViewTextBoxColumn2.HeaderText = "Full Name";
+            this.dataGridViewTextBoxColumn2.HeaderText = "FULL NAME";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             this.dataGridViewTextBoxColumn2.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn3
             // 
-            this.dataGridViewTextBoxColumn3.HeaderText = "Availabe in";
+            this.dataGridViewTextBoxColumn3.HeaderText = "AVAILABLE AT";
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             this.dataGridViewTextBoxColumn3.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn4
             // 
-            this.dataGridViewTextBoxColumn4.HeaderText = "Categories";
+            this.dataGridViewTextBoxColumn4.HeaderText = "CATEGORIES";
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             this.dataGridViewTextBoxColumn4.ReadOnly = true;
             // 
             // ModificationDate
             // 
-            this.ModificationDate.HeaderText = "Registered on";
+            this.ModificationDate.HeaderText = "MODIFICATION ON";
             this.ModificationDate.Name = "ModificationDate";
+            this.ModificationDate.ReadOnly = true;
             // 
             // Statistics
             // 
-            this.Statistics.HeaderText = "Statistics";
+            this.Statistics.HeaderText = "STATISTICS";
             this.Statistics.Name = "Statistics";
+            this.Statistics.ReadOnly = true;
             // 
             // Status
             // 
-            this.Status.HeaderText = "Status";
+            this.Status.HeaderText = "STATUS";
             this.Status.Name = "Status";
+            this.Status.ReadOnly = true;
             this.Status.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Status.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
