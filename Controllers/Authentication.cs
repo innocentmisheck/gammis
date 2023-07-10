@@ -12,6 +12,7 @@ namespace Gammis
         readonly ServerConnection IDconnection = new ServerConnection();
 
 
+
         public bool IDAuthentication(string username, string password)
         {
             MySqlCommand command = new MySqlCommand("SELECT s.ref_code,sa.password FROM tbl_staff s JOIN tbl_staff_access sa ON s.staff_id = sa.staff_id WHERE s.ref_code = @username AND sa.password=@password", IDconnection.GetConnection);
@@ -38,6 +39,29 @@ namespace Gammis
             }
         }
 
+        public bool RefCodeAuthentication(string reference_code)
+        {
+            MySqlCommand command = new MySqlCommand("SELECT ref_code FROM tbl_staff WHERE ref_code = @reference_code", IDconnection.GetConnection);
+            command.Parameters.Add("@reference_code", MySqlDbType.VarChar).Value = reference_code;
+            IDconnection.OpenConnect();
+            MySqlDataReader reader = command.ExecuteReader();
+
+            int result = 0;
+            while (reader.Read())
+            {
+                result++;
+            }
+            if (result == 1)
+            {
+                IDconnection.CloseConnect();
+                return true;
+            }
+            else
+            {
+                IDconnection.CloseConnect();
+                return false;
+            }
+        }
 
     }
 }

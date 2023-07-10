@@ -22,5 +22,10 @@ namespace Gammis.Helpers
         {
             return new Dashboard();
         }
+
+        public bool RefCodeAuthenticate(string refCode)
+        {
+            return security.RefCodeAuthentication(refCode);
+        }
     }
 }

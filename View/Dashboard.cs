@@ -35,13 +35,12 @@ namespace Gammis
             GameSessionTimer.Start();
 
             // Sample data
-            for (int i = 0; i < 100; i++)
+            for (int i = 0; i < 250; i++)
             {
                 bunifuContentDataGridView2.Rows.Add(new object[]
                 {
                     imageList1.Images[0]
-                  
-                }) ;
+                }); 
             }
         }
   
@@ -314,6 +313,27 @@ namespace Gammis
             AuthenticationBox.PasswordChar = '*';
         }
 
- 
+        private void AddContent_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AddContent2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Gaming2_Click(object sender, EventArgs e)
+        {
+            AdsPanel.Visible = false;
+            OperationsBar.Visible = true;
+            Routes.GamingPanelRoute.GoToGamingPanel(bunifuPages1);
+            return;
+        }
+
+        private void Gaming2_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+
+        }
     }
 }

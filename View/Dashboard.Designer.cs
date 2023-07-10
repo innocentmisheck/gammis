@@ -53,6 +53,7 @@ namespace Gammis
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
@@ -85,12 +86,11 @@ namespace Gammis
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties26 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties27 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties28 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.bunifuGradientPanel1 = new Bunifu.UI.WinForms.BunifuGradientPanel();
             this.iconPictureBox10 = new FontAwesome.Sharp.IconPictureBox();
             this.iconPictureBox9 = new FontAwesome.Sharp.IconPictureBox();
             this.iconPictureBox8 = new FontAwesome.Sharp.IconPictureBox();
-            this.iconPictureBox7 = new FontAwesome.Sharp.IconPictureBox();
+            this.Gaming2 = new FontAwesome.Sharp.IconPictureBox();
             this.iconPictureBox6 = new FontAwesome.Sharp.IconPictureBox();
             this.iconPictureBox5 = new FontAwesome.Sharp.IconPictureBox();
             this.bunifuSeparator2 = new Bunifu.UI.WinForms.BunifuSeparator();
@@ -124,7 +124,7 @@ namespace Gammis
             this.PayToPlay = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.bunifuLabel24 = new Bunifu.UI.WinForms.BunifuLabel();
             this.iconPictureBox57 = new FontAwesome.Sharp.IconPictureBox();
-            this.iconPictureBox16 = new FontAwesome.Sharp.IconPictureBox();
+            this.AddContent2 = new FontAwesome.Sharp.IconPictureBox();
             this.bunifuLabel6 = new Bunifu.UI.WinForms.BunifuLabel();
             this.iconPictureBox11 = new FontAwesome.Sharp.IconPictureBox();
             this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
@@ -189,7 +189,18 @@ namespace Gammis
             this.iconPictureBox13 = new FontAwesome.Sharp.IconPictureBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.bunifuGradientPanel11 = new Bunifu.UI.WinForms.BunifuGradientPanel();
+            this.ContentCounter = new Bunifu.UI.WinForms.BunifuLabel();
+            this.bunifuLabel25 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuContentDataGridView2 = new Bunifu.UI.WinForms.BunifuDataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LICENSES = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ModificationDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Statistics = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Status = new System.Windows.Forms.DataGridViewImageColumn();
+            this.Operations = new System.Windows.Forms.DataGridViewImageColumn();
             this.TaptoSearchContent = new FontAwesome.Sharp.IconPictureBox();
             this.SearchContent = new Bunifu.UI.WinForms.BunifuTextBox();
             this.bunifuDropdown2 = new Bunifu.UI.WinForms.BunifuDropdown();
@@ -269,22 +280,13 @@ namespace Gammis
             this.bunifuFormDrag1 = new Bunifu.UI.WinForms.BunifuFormDrag();
             this.bunifuToolTip1 = new Bunifu.UI.WinForms.BunifuToolTip(this.components);
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LICENSES = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ModificationDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Statistics = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Status = new System.Windows.Forms.DataGridViewImageColumn();
-            this.Operations = new System.Windows.Forms.DataGridViewImageColumn();
             this.DeleteOperations = new System.Windows.Forms.ImageList(this.components);
             this.OpenOperations = new System.Windows.Forms.ImageList(this.components);
             this.bunifuGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Gaming2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox4)).BeginInit();
@@ -299,7 +301,7 @@ namespace Gammis
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox15)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox14)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox57)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox16)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AddContent2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox11)).BeginInit();
             this.bunifuPanel1.SuspendLayout();
             this.AdsPanel.SuspendLayout();
@@ -367,7 +369,7 @@ namespace Gammis
             this.bunifuGradientPanel1.Controls.Add(this.iconPictureBox10);
             this.bunifuGradientPanel1.Controls.Add(this.iconPictureBox9);
             this.bunifuGradientPanel1.Controls.Add(this.iconPictureBox8);
-            this.bunifuGradientPanel1.Controls.Add(this.iconPictureBox7);
+            this.bunifuGradientPanel1.Controls.Add(this.Gaming2);
             this.bunifuGradientPanel1.Controls.Add(this.iconPictureBox6);
             this.bunifuGradientPanel1.Controls.Add(this.iconPictureBox5);
             this.bunifuGradientPanel1.Controls.Add(this.bunifuSeparator2);
@@ -455,22 +457,23 @@ namespace Gammis
             this.bunifuToolTip1.SetToolTipIcon(this.iconPictureBox8, null);
             this.bunifuToolTip1.SetToolTipTitle(this.iconPictureBox8, "");
             // 
-            // iconPictureBox7
+            // Gaming2
             // 
-            this.iconPictureBox7.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuTransition1.SetDecoration(this.iconPictureBox7, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.iconPictureBox7.IconChar = FontAwesome.Sharp.IconChar.Gamepad;
-            this.iconPictureBox7.IconColor = System.Drawing.Color.White;
-            this.iconPictureBox7.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBox7.IconSize = 40;
-            this.iconPictureBox7.Location = new System.Drawing.Point(200, 320);
-            this.iconPictureBox7.Name = "iconPictureBox7";
-            this.iconPictureBox7.Size = new System.Drawing.Size(40, 40);
-            this.iconPictureBox7.TabIndex = 20;
-            this.iconPictureBox7.TabStop = false;
-            this.bunifuToolTip1.SetToolTip(this.iconPictureBox7, "");
-            this.bunifuToolTip1.SetToolTipIcon(this.iconPictureBox7, null);
-            this.bunifuToolTip1.SetToolTipTitle(this.iconPictureBox7, "");
+            this.Gaming2.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuTransition1.SetDecoration(this.Gaming2, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.Gaming2.IconChar = FontAwesome.Sharp.IconChar.Gamepad;
+            this.Gaming2.IconColor = System.Drawing.Color.White;
+            this.Gaming2.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.Gaming2.IconSize = 40;
+            this.Gaming2.Location = new System.Drawing.Point(200, 320);
+            this.Gaming2.Name = "Gaming2";
+            this.Gaming2.Size = new System.Drawing.Size(40, 40);
+            this.Gaming2.TabIndex = 20;
+            this.Gaming2.TabStop = false;
+            this.bunifuToolTip1.SetToolTip(this.Gaming2, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.Gaming2, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.Gaming2, "");
+            this.Gaming2.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.Gaming2_MouseDoubleClick);
             // 
             // iconPictureBox6
             // 
@@ -1873,23 +1876,24 @@ namespace Gammis
             this.bunifuToolTip1.SetToolTipIcon(this.iconPictureBox57, null);
             this.bunifuToolTip1.SetToolTipTitle(this.iconPictureBox57, "");
             // 
-            // iconPictureBox16
+            // AddContent2
             // 
-            this.iconPictureBox16.BackColor = System.Drawing.Color.Transparent;
-            this.iconPictureBox16.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuTransition1.SetDecoration(this.iconPictureBox16, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
-            this.iconPictureBox16.IconChar = FontAwesome.Sharp.IconChar.BookBookmark;
-            this.iconPictureBox16.IconColor = System.Drawing.Color.White;
-            this.iconPictureBox16.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBox16.IconSize = 30;
-            this.iconPictureBox16.Location = new System.Drawing.Point(1048, 32);
-            this.iconPictureBox16.Name = "iconPictureBox16";
-            this.iconPictureBox16.Size = new System.Drawing.Size(30, 30);
-            this.iconPictureBox16.TabIndex = 19;
-            this.iconPictureBox16.TabStop = false;
-            this.bunifuToolTip1.SetToolTip(this.iconPictureBox16, "Add disk, PC, Playstation  details etc.");
-            this.bunifuToolTip1.SetToolTipIcon(this.iconPictureBox16, null);
-            this.bunifuToolTip1.SetToolTipTitle(this.iconPictureBox16, "");
+            this.AddContent2.BackColor = System.Drawing.Color.Transparent;
+            this.AddContent2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuTransition1.SetDecoration(this.AddContent2, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.AddContent2.IconChar = FontAwesome.Sharp.IconChar.BookBookmark;
+            this.AddContent2.IconColor = System.Drawing.Color.White;
+            this.AddContent2.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.AddContent2.IconSize = 30;
+            this.AddContent2.Location = new System.Drawing.Point(1048, 32);
+            this.AddContent2.Name = "AddContent2";
+            this.AddContent2.Size = new System.Drawing.Size(30, 30);
+            this.AddContent2.TabIndex = 19;
+            this.AddContent2.TabStop = false;
+            this.bunifuToolTip1.SetToolTip(this.AddContent2, "Add disk, PC, Playstation  details etc.");
+            this.bunifuToolTip1.SetToolTipIcon(this.AddContent2, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.AddContent2, "");
+            this.AddContent2.Click += new System.EventHandler(this.AddContent2_Click);
             // 
             // bunifuLabel6
             // 
@@ -3246,6 +3250,8 @@ namespace Gammis
             this.bunifuGradientPanel11.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel11.BackgroundImage")));
             this.bunifuGradientPanel11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuGradientPanel11.BorderRadius = 10;
+            this.bunifuGradientPanel11.Controls.Add(this.ContentCounter);
+            this.bunifuGradientPanel11.Controls.Add(this.bunifuLabel25);
             this.bunifuGradientPanel11.Controls.Add(this.bunifuContentDataGridView2);
             this.bunifuGradientPanel11.Controls.Add(this.TaptoSearchContent);
             this.bunifuGradientPanel11.Controls.Add(this.SearchContent);
@@ -3253,7 +3259,7 @@ namespace Gammis
             this.bunifuGradientPanel11.Controls.Add(this.bunifuDropdown1);
             this.bunifuGradientPanel11.Controls.Add(this.ChooseAction);
             this.bunifuGradientPanel11.Controls.Add(this.AddContent);
-            this.bunifuGradientPanel11.Controls.Add(this.iconPictureBox16);
+            this.bunifuGradientPanel11.Controls.Add(this.AddContent2);
             this.bunifuTransition1.SetDecoration(this.bunifuGradientPanel11, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.bunifuGradientPanel11.GradientBottomLeft = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(37)))), ((int)(((byte)(41)))));
             this.bunifuGradientPanel11.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(37)))), ((int)(((byte)(41)))));
@@ -3267,6 +3273,46 @@ namespace Gammis
             this.bunifuToolTip1.SetToolTip(this.bunifuGradientPanel11, "");
             this.bunifuToolTip1.SetToolTipIcon(this.bunifuGradientPanel11, null);
             this.bunifuToolTip1.SetToolTipTitle(this.bunifuGradientPanel11, "");
+            // 
+            // ContentCounter
+            // 
+            this.ContentCounter.AllowParentOverrides = false;
+            this.ContentCounter.AutoEllipsis = true;
+            this.ContentCounter.CursorType = null;
+            this.bunifuTransition1.SetDecoration(this.ContentCounter, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.ContentCounter.Font = new System.Drawing.Font("Bahnschrift Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ContentCounter.ForeColor = System.Drawing.Color.White;
+            this.ContentCounter.Location = new System.Drawing.Point(1048, 488);
+            this.ContentCounter.Name = "ContentCounter";
+            this.ContentCounter.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.ContentCounter.Size = new System.Drawing.Size(23, 19);
+            this.ContentCounter.TabIndex = 35;
+            this.ContentCounter.Text = "100";
+            this.ContentCounter.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.ContentCounter.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.bunifuToolTip1.SetToolTip(this.ContentCounter, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.ContentCounter, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.ContentCounter, "");
+            // 
+            // bunifuLabel25
+            // 
+            this.bunifuLabel25.AllowParentOverrides = false;
+            this.bunifuLabel25.AutoEllipsis = false;
+            this.bunifuLabel25.CursorType = null;
+            this.bunifuTransition1.SetDecoration(this.bunifuLabel25, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
+            this.bunifuLabel25.Font = new System.Drawing.Font("Bahnschrift Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuLabel25.ForeColor = System.Drawing.Color.White;
+            this.bunifuLabel25.Location = new System.Drawing.Point(920, 488);
+            this.bunifuLabel25.Name = "bunifuLabel25";
+            this.bunifuLabel25.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel25.Size = new System.Drawing.Size(125, 19);
+            this.bunifuLabel25.TabIndex = 34;
+            this.bunifuLabel25.Text = "TOTAL CONTENT :";
+            this.bunifuLabel25.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.bunifuLabel25.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.bunifuToolTip1.SetToolTip(this.bunifuLabel25, "");
+            this.bunifuToolTip1.SetToolTipIcon(this.bunifuLabel25, null);
+            this.bunifuToolTip1.SetToolTipTitle(this.bunifuLabel25, "");
             // 
             // bunifuContentDataGridView2
             // 
@@ -3282,13 +3328,13 @@ namespace Gammis
             this.bunifuContentDataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.bunifuContentDataGridView2.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.bunifuContentDataGridView2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(37)))), ((int)(((byte)(41)))));
-            this.bunifuContentDataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.bunifuContentDataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.bunifuContentDataGridView2.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
             this.bunifuContentDataGridView2.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(16)))), ((int)(((byte)(18)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Bahnschrift", 10F);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(63)))), ((int)(((byte)(65)))));
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
@@ -3312,20 +3358,20 @@ namespace Gammis
             this.bunifuContentDataGridView2.CurrentTheme.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(16)))), ((int)(((byte)(18)))));
             this.bunifuContentDataGridView2.CurrentTheme.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(56)))), ((int)(((byte)(62)))));
             this.bunifuContentDataGridView2.CurrentTheme.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(16)))), ((int)(((byte)(18)))));
-            this.bunifuContentDataGridView2.CurrentTheme.HeaderStyle.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuContentDataGridView2.CurrentTheme.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.bunifuContentDataGridView2.CurrentTheme.HeaderStyle.Font = new System.Drawing.Font("Bahnschrift", 10F);
+            this.bunifuContentDataGridView2.CurrentTheme.HeaderStyle.ForeColor = System.Drawing.SystemColors.Window;
             this.bunifuContentDataGridView2.CurrentTheme.HeaderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(63)))), ((int)(((byte)(65)))));
             this.bunifuContentDataGridView2.CurrentTheme.HeaderStyle.SelectionForeColor = System.Drawing.Color.White;
             this.bunifuContentDataGridView2.CurrentTheme.Name = null;
             this.bunifuContentDataGridView2.CurrentTheme.RowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(37)))), ((int)(((byte)(41)))));
-            this.bunifuContentDataGridView2.CurrentTheme.RowsStyle.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuContentDataGridView2.CurrentTheme.RowsStyle.Font = new System.Drawing.Font("Bahnschrift", 10F, System.Drawing.FontStyle.Bold);
             this.bunifuContentDataGridView2.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.White;
             this.bunifuContentDataGridView2.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(117)))), ((int)(((byte)(119)))));
             this.bunifuContentDataGridView2.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.WhiteSmoke;
             this.bunifuTransition1.SetDecoration(this.bunifuContentDataGridView2, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(37)))), ((int)(((byte)(41)))));
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Bahnschrift", 10F, System.Drawing.FontStyle.Bold);
             dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(117)))), ((int)(((byte)(119)))));
             dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.WhiteSmoke;
@@ -3336,8 +3382,8 @@ namespace Gammis
             this.bunifuContentDataGridView2.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(56)))), ((int)(((byte)(62)))));
             this.bunifuContentDataGridView2.HeaderBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(16)))), ((int)(((byte)(18)))));
             this.bunifuContentDataGridView2.HeaderBgColor = System.Drawing.Color.DodgerBlue;
-            this.bunifuContentDataGridView2.HeaderForeColor = System.Drawing.Color.White;
-            this.bunifuContentDataGridView2.Location = new System.Drawing.Point(8, 104);
+            this.bunifuContentDataGridView2.HeaderForeColor = System.Drawing.SystemColors.Window;
+            this.bunifuContentDataGridView2.Location = new System.Drawing.Point(32, 96);
             this.bunifuContentDataGridView2.Name = "bunifuContentDataGridView2";
             this.bunifuContentDataGridView2.RightToLeft = System.Windows.Forms.RightToLeft.No;
             dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -3367,6 +3413,66 @@ namespace Gammis
             this.bunifuToolTip1.SetToolTipIcon(this.bunifuContentDataGridView2, null);
             this.bunifuToolTip1.SetToolTipTitle(this.bunifuContentDataGridView2, "");
             // 
+            // dataGridViewTextBoxColumn1
+            // 
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle6.NullValue")));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
+            this.dataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle6;
+            this.dataGridViewTextBoxColumn1.Description = "Content Image";
+            this.dataGridViewTextBoxColumn1.HeaderText = "ICON";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTextBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.HeaderText = "FULL NAME";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            // 
+            // LICENSES
+            // 
+            this.LICENSES.HeaderText = "LICENSES";
+            this.LICENSES.Name = "LICENSES";
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.HeaderText = "AVAILABLE AT";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.HeaderText = "CATEGORIES";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            // 
+            // ModificationDate
+            // 
+            this.ModificationDate.HeaderText = "MODIFIED ON";
+            this.ModificationDate.Name = "ModificationDate";
+            // 
+            // Statistics
+            // 
+            this.Statistics.HeaderText = "STATISTICS";
+            this.Statistics.Name = "Statistics";
+            // 
+            // Status
+            // 
+            this.Status.HeaderText = "STATUS";
+            this.Status.Name = "Status";
+            this.Status.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Status.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // Operations
+            // 
+            this.Operations.HeaderText = "OPERATIONS";
+            this.Operations.Name = "Operations";
+            this.Operations.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Operations.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
             // TaptoSearchContent
             // 
             this.TaptoSearchContent.BackColor = System.Drawing.Color.Transparent;
@@ -3382,9 +3488,10 @@ namespace Gammis
             this.TaptoSearchContent.Size = new System.Drawing.Size(35, 35);
             this.TaptoSearchContent.TabIndex = 33;
             this.TaptoSearchContent.TabStop = false;
-            this.bunifuToolTip1.SetToolTip(this.TaptoSearchContent, "Add disk, PC, Playstation  details etc.");
+            this.bunifuToolTip1.SetToolTip(this.TaptoSearchContent, "Tap to search");
             this.bunifuToolTip1.SetToolTipIcon(this.TaptoSearchContent, null);
             this.bunifuToolTip1.SetToolTipTitle(this.TaptoSearchContent, "");
+            this.TaptoSearchContent.UseIconCache = true;
             // 
             // SearchContent
             // 
@@ -3704,6 +3811,7 @@ namespace Gammis
             this.bunifuToolTip1.SetToolTipIcon(this.AddContent, null);
             this.bunifuToolTip1.SetToolTipTitle(this.AddContent, "");
             this.AddContent.UseDefaultRadiusAndThickness = true;
+            this.AddContent.Click += new System.EventHandler(this.AddContent_Click);
             // 
             // tabPage3
             // 
@@ -5870,66 +5978,6 @@ namespace Gammis
             this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
             this.imageList1.Images.SetKeyName(0, "fifa-23-cover-ultimate-edition.jpg");
             // 
-            // dataGridViewTextBoxColumn1
-            // 
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle6.NullValue")));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
-            this.dataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle6;
-            this.dataGridViewTextBoxColumn1.Description = "Content Image";
-            this.dataGridViewTextBoxColumn1.HeaderText = "ICON";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTextBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.HeaderText = "FULL NAME";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            // 
-            // LICENSES
-            // 
-            this.LICENSES.HeaderText = "LICENSES";
-            this.LICENSES.Name = "LICENSES";
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.HeaderText = "AVAILABLE AT";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.HeaderText = "CATEGORIES";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            // 
-            // ModificationDate
-            // 
-            this.ModificationDate.HeaderText = "MODIFIED ON";
-            this.ModificationDate.Name = "ModificationDate";
-            // 
-            // Statistics
-            // 
-            this.Statistics.HeaderText = "STATISTICS";
-            this.Statistics.Name = "Statistics";
-            // 
-            // Status
-            // 
-            this.Status.HeaderText = "STATUS";
-            this.Status.Name = "Status";
-            this.Status.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Status.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // Operations
-            // 
-            this.Operations.HeaderText = "OPERATIONS";
-            this.Operations.Name = "Operations";
-            this.Operations.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Operations.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
             // DeleteOperations
             // 
             this.DeleteOperations.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("DeleteOperations.ImageStream")));
@@ -5958,6 +6006,7 @@ namespace Gammis
             this.Controls.Add(this.bunifuGradientPanel1);
             this.bunifuTransition1.SetDecoration(this, Bunifu.UI.WinForms.BunifuTransition.DecorationType.None);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Dashboard";
             this.Text = "Gammis | Monitor";
             this.TopMost = true;
@@ -5966,7 +6015,7 @@ namespace Gammis
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Gaming2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox4)).EndInit();
@@ -5981,7 +6030,7 @@ namespace Gammis
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox15)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox14)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox57)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox16)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AddContent2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox11)).EndInit();
             this.bunifuPanel1.ResumeLayout(false);
             this.AdsPanel.ResumeLayout(false);
@@ -6025,6 +6074,7 @@ namespace Gammis
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox13)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.bunifuGradientPanel11.ResumeLayout(false);
+            this.bunifuGradientPanel11.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuContentDataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TaptoSearchContent)).EndInit();
             this.tabPage6.ResumeLayout(false);
@@ -6070,7 +6120,7 @@ namespace Gammis
         private FontAwesome.Sharp.IconPictureBox iconPictureBox10;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox9;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox8;
-        private FontAwesome.Sharp.IconPictureBox iconPictureBox7;
+        private FontAwesome.Sharp.IconPictureBox Gaming2;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox6;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox5;
         private Bunifu.UI.WinForms.BunifuSeparator bunifuSeparator2;
@@ -6087,7 +6137,7 @@ namespace Gammis
         private Bunifu.UI.WinForms.BunifuFormControlBox bunifuFormControlBox1;
         private Bunifu.UI.WinForms.BunifuGradientPanel Pay2play;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox17;
-        private FontAwesome.Sharp.IconPictureBox iconPictureBox16;
+        private FontAwesome.Sharp.IconPictureBox AddContent2;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox15;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox14;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 PayToPlay;
@@ -6250,5 +6300,7 @@ namespace Gammis
         private System.Windows.Forms.DataGridViewImageColumn Operations;
         private System.Windows.Forms.ImageList DeleteOperations;
         private System.Windows.Forms.ImageList OpenOperations;
+        private Bunifu.UI.WinForms.BunifuLabel ContentCounter;
+        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel25;
     }
 }

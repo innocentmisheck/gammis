@@ -36,21 +36,19 @@
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties5 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties6 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties7 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties8 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             this.bunifuFormCaptionButton1 = new Bunifu.UI.WinForms.BunifuFormCaptionButton();
             this.bunifuPictureBox1 = new Bunifu.UI.WinForms.BunifuPictureBox();
             this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuPictureBox2 = new Bunifu.UI.WinForms.BunifuPictureBox();
             this.BunifuLabel2 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.OnlineID = new Bunifu.UI.WinForms.BunifuTextBox();
             this.bunifuLabel3 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuLabel4 = new Bunifu.UI.WinForms.BunifuLabel();
             this.IDLoader = new Bunifu.UI.WinForms.BunifuLoader();
-            this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             this.iconPictureBox2 = new FontAwesome.Sharp.IconPictureBox();
             this.Passcode = new Bunifu.UI.WinForms.BunifuTextBox();
             this.bunifuLabel5 = new Bunifu.UI.WinForms.BunifuLabel();
@@ -58,17 +56,19 @@
             this.LoginButton = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.LoginSuccess = new FontAwesome.Sharp.IconPictureBox();
             this.bunifuSnackbar1 = new Bunifu.UI.WinForms.BunifuSnackbar(this.components);
-            this.Validation = new System.Windows.Forms.Timer(this.components);
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.LoginFailed = new FontAwesome.Sharp.IconPictureBox();
             this.SubmitAccount = new FontAwesome.Sharp.IconPictureBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.OnlineID = new Bunifu.UI.WinForms.BunifuTextBox();
+            this.iconPictureBox3 = new FontAwesome.Sharp.IconPictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LoginSuccess)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LoginFailed)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SubmitAccount)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuFormCaptionButton1
@@ -181,84 +181,6 @@
             this.BunifuLabel2.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.BunifuLabel2.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
-            // OnlineID
-            // 
-            this.OnlineID.AcceptsReturn = false;
-            this.OnlineID.AcceptsTab = false;
-            this.OnlineID.AnimationSpeed = 200;
-            this.OnlineID.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.OnlineID.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.OnlineID.AutoSizeHeight = true;
-            this.OnlineID.BackColor = System.Drawing.Color.White;
-            this.OnlineID.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("OnlineID.BackgroundImage")));
-            this.OnlineID.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.OnlineID.BorderColorActive = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(97)))), ((int)(((byte)(252)))));
-            this.OnlineID.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.OnlineID.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(97)))), ((int)(((byte)(252)))));
-            this.OnlineID.BorderColorIdle = System.Drawing.Color.Black;
-            this.OnlineID.BorderRadius = 1;
-            this.OnlineID.BorderThickness = 1;
-            this.OnlineID.CharacterCase = Bunifu.UI.WinForms.BunifuTextBox.CharacterCases.Normal;
-            this.OnlineID.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.OnlineID.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.OnlineID.DefaultFont = new System.Drawing.Font("Candara", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.OnlineID.DefaultText = "";
-            this.OnlineID.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.OnlineID.ForeColor = System.Drawing.Color.White;
-            this.OnlineID.HideSelection = true;
-            this.OnlineID.IconLeft = null;
-            this.OnlineID.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
-            this.OnlineID.IconPadding = 10;
-            this.OnlineID.IconRight = null;
-            this.OnlineID.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
-            this.OnlineID.Lines = new string[0];
-            this.OnlineID.Location = new System.Drawing.Point(32, 177);
-            this.OnlineID.MaxLength = 32767;
-            this.OnlineID.MinimumSize = new System.Drawing.Size(1, 1);
-            this.OnlineID.Modified = false;
-            this.OnlineID.Multiline = false;
-            this.OnlineID.Name = "OnlineID";
-            stateProperties1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(97)))), ((int)(((byte)(252)))));
-            stateProperties1.FillColor = System.Drawing.Color.Empty;
-            stateProperties1.ForeColor = System.Drawing.Color.Empty;
-            stateProperties1.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.OnlineID.OnActiveState = stateProperties1;
-            stateProperties2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            stateProperties2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            stateProperties2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            stateProperties2.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.OnlineID.OnDisabledState = stateProperties2;
-            stateProperties3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(97)))), ((int)(((byte)(252)))));
-            stateProperties3.FillColor = System.Drawing.Color.Empty;
-            stateProperties3.ForeColor = System.Drawing.Color.Empty;
-            stateProperties3.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.OnlineID.OnHoverState = stateProperties3;
-            stateProperties4.BorderColor = System.Drawing.Color.Black;
-            stateProperties4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            stateProperties4.ForeColor = System.Drawing.Color.White;
-            stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.OnlineID.OnIdleState = stateProperties4;
-            this.OnlineID.Padding = new System.Windows.Forms.Padding(3);
-            this.OnlineID.PasswordChar = '\0';
-            this.OnlineID.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(160)))), ((int)(((byte)(160)))));
-            this.OnlineID.PlaceholderText = "Enter a gamertag";
-            this.OnlineID.ReadOnly = false;
-            this.OnlineID.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.OnlineID.SelectedText = "";
-            this.OnlineID.SelectionLength = 0;
-            this.OnlineID.SelectionStart = 0;
-            this.OnlineID.ShortcutsEnabled = true;
-            this.OnlineID.Size = new System.Drawing.Size(296, 55);
-            this.OnlineID.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
-            this.OnlineID.TabIndex = 1;
-            this.OnlineID.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.OnlineID.TextMarginBottom = 0;
-            this.OnlineID.TextMarginLeft = 3;
-            this.OnlineID.TextMarginTop = 1;
-            this.OnlineID.TextPlaceholder = "Enter a gamertag";
-            this.OnlineID.UseSystemPasswordChar = false;
-            this.OnlineID.WordWrap = true;
-            // 
             // bunifuLabel3
             // 
             this.bunifuLabel3.AllowParentOverrides = false;
@@ -302,7 +224,7 @@
             this.IDLoader.DashWidth = 0.5F;
             this.IDLoader.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.IDLoader.Image = null;
-            this.IDLoader.Location = new System.Drawing.Point(392, 192);
+            this.IDLoader.Location = new System.Drawing.Point(336, 192);
             this.IDLoader.Name = "IDLoader";
             this.IDLoader.NoRounding = false;
             this.IDLoader.Preset = Bunifu.UI.WinForms.BunifuLoader.StylePresets.Dashed;
@@ -315,27 +237,14 @@
             this.IDLoader.Thickness = 6;
             this.IDLoader.Transparent = true;
             // 
-            // iconPictureBox1
-            // 
-            this.iconPictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.UserLock;
-            this.iconPictureBox1.IconColor = System.Drawing.Color.White;
-            this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBox1.IconSize = 48;
-            this.iconPictureBox1.Location = new System.Drawing.Point(336, 184);
-            this.iconPictureBox1.Name = "iconPictureBox1";
-            this.iconPictureBox1.Size = new System.Drawing.Size(48, 48);
-            this.iconPictureBox1.TabIndex = 9;
-            this.iconPictureBox1.TabStop = false;
-            // 
             // iconPictureBox2
             // 
-            this.iconPictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.iconPictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.iconPictureBox2.IconChar = FontAwesome.Sharp.IconChar.CodeCompare;
             this.iconPictureBox2.IconColor = System.Drawing.Color.White;
             this.iconPictureBox2.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconPictureBox2.IconSize = 48;
-            this.iconPictureBox2.Location = new System.Drawing.Point(336, 336);
+            this.iconPictureBox2.Location = new System.Drawing.Point(275, 331);
             this.iconPictureBox2.Name = "iconPictureBox2";
             this.iconPictureBox2.Size = new System.Drawing.Size(48, 48);
             this.iconPictureBox2.TabIndex = 13;
@@ -378,30 +287,30 @@
             this.Passcode.Modified = false;
             this.Passcode.Multiline = false;
             this.Passcode.Name = "Passcode";
-            stateProperties5.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(97)))), ((int)(((byte)(252)))));
-            stateProperties5.FillColor = System.Drawing.Color.Empty;
-            stateProperties5.ForeColor = System.Drawing.Color.Empty;
-            stateProperties5.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.Passcode.OnActiveState = stateProperties5;
-            stateProperties6.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            stateProperties6.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            stateProperties6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            stateProperties6.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.Passcode.OnDisabledState = stateProperties6;
-            stateProperties7.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(97)))), ((int)(((byte)(252)))));
-            stateProperties7.FillColor = System.Drawing.Color.Empty;
-            stateProperties7.ForeColor = System.Drawing.Color.Empty;
-            stateProperties7.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.Passcode.OnHoverState = stateProperties7;
-            stateProperties8.BorderColor = System.Drawing.Color.Black;
-            stateProperties8.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            stateProperties8.ForeColor = System.Drawing.Color.White;
-            stateProperties8.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.Passcode.OnIdleState = stateProperties8;
+            stateProperties1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(97)))), ((int)(((byte)(252)))));
+            stateProperties1.FillColor = System.Drawing.Color.Empty;
+            stateProperties1.ForeColor = System.Drawing.Color.Empty;
+            stateProperties1.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.Passcode.OnActiveState = stateProperties1;
+            stateProperties2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            stateProperties2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            stateProperties2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            stateProperties2.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.Passcode.OnDisabledState = stateProperties2;
+            stateProperties3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(97)))), ((int)(((byte)(252)))));
+            stateProperties3.FillColor = System.Drawing.Color.Empty;
+            stateProperties3.ForeColor = System.Drawing.Color.Empty;
+            stateProperties3.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.Passcode.OnHoverState = stateProperties3;
+            stateProperties4.BorderColor = System.Drawing.Color.Black;
+            stateProperties4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            stateProperties4.ForeColor = System.Drawing.Color.White;
+            stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.Passcode.OnIdleState = stateProperties4;
             this.Passcode.Padding = new System.Windows.Forms.Padding(3);
             this.Passcode.PasswordChar = '\0';
             this.Passcode.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(160)))), ((int)(((byte)(160)))));
-            this.Passcode.PlaceholderText = "Enter your passcode";
+            this.Passcode.PlaceholderText = "Enter passcode";
             this.Passcode.ReadOnly = false;
             this.Passcode.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.Passcode.SelectedText = "";
@@ -415,7 +324,7 @@
             this.Passcode.TextMarginBottom = 0;
             this.Passcode.TextMarginLeft = 3;
             this.Passcode.TextMarginTop = 1;
-            this.Passcode.TextPlaceholder = "Enter your passcode";
+            this.Passcode.TextPlaceholder = "Enter passcode";
             this.Passcode.UseSystemPasswordChar = false;
             this.Passcode.WordWrap = true;
             this.Passcode.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Passcode_KeyPress);
@@ -482,6 +391,7 @@
             this.LoginButton.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.LoginButton.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.LoginButton.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.LoginButton.Enabled = false;
             this.LoginButton.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.ButtonStates.Pressed;
             this.LoginButton.Font = new System.Drawing.Font("Candara", 15F, System.Drawing.FontStyle.Bold);
             this.LoginButton.ForeColor = System.Drawing.Color.White;
@@ -537,7 +447,6 @@
             this.LoginButton.OnPressedState.IconRightImage = null;
             this.LoginButton.Size = new System.Drawing.Size(296, 48);
             this.LoginButton.TabIndex = 3;
-            this.LoginButton.TabStop = false;
             this.LoginButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.LoginButton.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
             this.LoginButton.TextMarginLeft = 0;
@@ -548,7 +457,7 @@
             // LoginSuccess
             // 
             this.LoginSuccess.BackColor = System.Drawing.Color.Transparent;
-            this.LoginSuccess.IconChar = FontAwesome.Sharp.IconChar.FileCircleCheck;
+            this.LoginSuccess.IconChar = FontAwesome.Sharp.IconChar.FileCircleExclamation;
             this.LoginSuccess.IconColor = System.Drawing.Color.White;
             this.LoginSuccess.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.LoginSuccess.IconSize = 48;
@@ -645,8 +554,9 @@
             // SubmitAccount
             // 
             this.SubmitAccount.BackColor = System.Drawing.Color.Transparent;
-            this.SubmitAccount.IconChar = FontAwesome.Sharp.IconChar.ArrowRightFromFile;
-            this.SubmitAccount.IconColor = System.Drawing.Color.White;
+            this.SubmitAccount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.SubmitAccount.IconChar = FontAwesome.Sharp.IconChar.ClipboardUser;
+            this.SubmitAccount.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
             this.SubmitAccount.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.SubmitAccount.IconSize = 48;
             this.SubmitAccount.Location = new System.Drawing.Point(336, 416);
@@ -655,12 +565,111 @@
             this.SubmitAccount.TabIndex = 19;
             this.SubmitAccount.TabStop = false;
             // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 2000;
+            // 
+            // OnlineID
+            // 
+            this.OnlineID.AcceptsReturn = false;
+            this.OnlineID.AcceptsTab = false;
+            this.OnlineID.AnimationSpeed = 200;
+            this.OnlineID.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.OnlineID.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.OnlineID.AutoSizeHeight = true;
+            this.OnlineID.BackColor = System.Drawing.Color.White;
+            this.OnlineID.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("OnlineID.BackgroundImage")));
+            this.OnlineID.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.OnlineID.BorderColorActive = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(97)))), ((int)(((byte)(252)))));
+            this.OnlineID.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.OnlineID.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(97)))), ((int)(((byte)(252)))));
+            this.OnlineID.BorderColorIdle = System.Drawing.Color.Black;
+            this.OnlineID.BorderRadius = 1;
+            this.OnlineID.BorderThickness = 1;
+            this.OnlineID.CharacterCase = Bunifu.UI.WinForms.BunifuTextBox.CharacterCases.Normal;
+            this.OnlineID.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.OnlineID.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.OnlineID.DefaultFont = new System.Drawing.Font("Candara", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OnlineID.DefaultText = "";
+            this.OnlineID.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.OnlineID.ForeColor = System.Drawing.Color.White;
+            this.OnlineID.HideSelection = true;
+            this.OnlineID.IconLeft = null;
+            this.OnlineID.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
+            this.OnlineID.IconPadding = 10;
+            this.OnlineID.IconRight = null;
+            this.OnlineID.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
+            this.OnlineID.Lines = new string[0];
+            this.OnlineID.Location = new System.Drawing.Point(32, 184);
+            this.OnlineID.MaxLength = 32767;
+            this.OnlineID.MinimumSize = new System.Drawing.Size(1, 1);
+            this.OnlineID.Modified = false;
+            this.OnlineID.Multiline = false;
+            this.OnlineID.Name = "OnlineID";
+            stateProperties5.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(97)))), ((int)(((byte)(252)))));
+            stateProperties5.FillColor = System.Drawing.Color.Empty;
+            stateProperties5.ForeColor = System.Drawing.Color.Empty;
+            stateProperties5.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.OnlineID.OnActiveState = stateProperties5;
+            stateProperties6.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            stateProperties6.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            stateProperties6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            stateProperties6.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.OnlineID.OnDisabledState = stateProperties6;
+            stateProperties7.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(97)))), ((int)(((byte)(252)))));
+            stateProperties7.FillColor = System.Drawing.Color.Empty;
+            stateProperties7.ForeColor = System.Drawing.Color.Empty;
+            stateProperties7.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.OnlineID.OnHoverState = stateProperties7;
+            stateProperties8.BorderColor = System.Drawing.Color.Black;
+            stateProperties8.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            stateProperties8.ForeColor = System.Drawing.Color.White;
+            stateProperties8.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.OnlineID.OnIdleState = stateProperties8;
+            this.OnlineID.Padding = new System.Windows.Forms.Padding(3);
+            this.OnlineID.PasswordChar = '\0';
+            this.OnlineID.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(160)))), ((int)(((byte)(160)))));
+            this.OnlineID.PlaceholderText = "Enter Gamertag";
+            this.OnlineID.ReadOnly = false;
+            this.OnlineID.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.OnlineID.SelectedText = "";
+            this.OnlineID.SelectionLength = 0;
+            this.OnlineID.SelectionStart = 0;
+            this.OnlineID.ShortcutsEnabled = true;
+            this.OnlineID.Size = new System.Drawing.Size(296, 55);
+            this.OnlineID.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
+            this.OnlineID.TabIndex = 20;
+            this.OnlineID.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.OnlineID.TextMarginBottom = 0;
+            this.OnlineID.TextMarginLeft = 3;
+            this.OnlineID.TextMarginTop = 1;
+            this.OnlineID.TextPlaceholder = "Enter Gamertag";
+            this.OnlineID.UseSystemPasswordChar = false;
+            this.OnlineID.WordWrap = true;
+            this.OnlineID.KeyUp += new System.Windows.Forms.KeyEventHandler(this.OnlineID_KeyUp_1);
+            // 
+            // iconPictureBox3
+            // 
+            this.iconPictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.iconPictureBox3.IconChar = FontAwesome.Sharp.IconChar.UserLock;
+            this.iconPictureBox3.IconColor = System.Drawing.Color.White;
+            this.iconPictureBox3.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconPictureBox3.IconSize = 47;
+            this.iconPictureBox3.Location = new System.Drawing.Point(275, 189);
+            this.iconPictureBox3.Name = "iconPictureBox3";
+            this.iconPictureBox3.Size = new System.Drawing.Size(47, 47);
+            this.iconPictureBox3.TabIndex = 21;
+            this.iconPictureBox3.TabStop = false;
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(47)))), ((int)(((byte)(47)))));
             this.ClientSize = new System.Drawing.Size(625, 650);
+            this.Controls.Add(this.iconPictureBox3);
+            this.Controls.Add(this.OnlineID);
             this.Controls.Add(this.SubmitAccount);
             this.Controls.Add(this.LoginFailed);
             this.Controls.Add(this.LoginSuccess);
@@ -669,11 +678,9 @@
             this.Controls.Add(this.iconPictureBox2);
             this.Controls.Add(this.Passcode);
             this.Controls.Add(this.bunifuLabel5);
-            this.Controls.Add(this.iconPictureBox1);
             this.Controls.Add(this.IDLoader);
             this.Controls.Add(this.bunifuLabel4);
             this.Controls.Add(this.bunifuLabel3);
-            this.Controls.Add(this.OnlineID);
             this.Controls.Add(this.BunifuLabel2);
             this.Controls.Add(this.bunifuPictureBox2);
             this.Controls.Add(this.bunifuLabel1);
@@ -684,13 +691,14 @@
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
+            this.Load += new System.EventHandler(this.Login_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.LoginSuccess)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.LoginFailed)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SubmitAccount)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -703,11 +711,9 @@
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel1;
         private Bunifu.UI.WinForms.BunifuPictureBox bunifuPictureBox2;
         private Bunifu.UI.WinForms.BunifuLabel BunifuLabel2;
-        private Bunifu.UI.WinForms.BunifuTextBox OnlineID;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel3;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel4;
         private Bunifu.UI.WinForms.BunifuLoader IDLoader;
-        private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox2;
         private Bunifu.UI.WinForms.BunifuTextBox Passcode;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel5;
@@ -715,9 +721,11 @@
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 LoginButton;
         private FontAwesome.Sharp.IconPictureBox LoginSuccess;
         private Bunifu.UI.WinForms.BunifuSnackbar bunifuSnackbar1;
-        private System.Windows.Forms.Timer Validation;
         private System.Windows.Forms.ToolTip toolTip1;
         private FontAwesome.Sharp.IconPictureBox LoginFailed;
         private FontAwesome.Sharp.IconPictureBox SubmitAccount;
+        private System.Windows.Forms.Timer timer1;
+        private Bunifu.UI.WinForms.BunifuTextBox OnlineID;
+        private FontAwesome.Sharp.IconPictureBox iconPictureBox3;
     }
 }

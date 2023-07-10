@@ -131,7 +131,7 @@
 </value>
   </data>
   <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>247, 17</value>
+    <value>151, 14</value>
   </metadata>
   <data name="bunifuPictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -5464,20 +5464,6 @@
   <data name="BunifuLabel2.BaseStylesheet" xml:space="preserve">
     <value>#bunifu-label { padding: 0px; font-family: 'Candara'; font-size: 18pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: rgb(255, 255, 255); text-align: left; }</value>
   </data>
-  <data name="OnlineID.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAASgAAAA3CAYAAAC/8NfjAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHfSURBVHhe7dSxTQRQEEPBuwqu/9oogwIAy0C0uS8YS6Mv
-        fW38HmZmb73n8/nx83wBvIPfJv3v6/V6AbyFNKlp6s4jgIU0qWnqziOAhTSpaerOI4CFNKlp6s4jgIU0
-        qWnqziOAhTSpaerOI4CFNKlp6s4jgIU0qWnqziOAhTSpaerOI4CFNKlp6s4jgIU0qWnqziOAhTSpaerO
-        I4CFNKlp6s4jgIU0qWnqziOAhTSpaerOI4CFNKlp6s4jgIU0qWnqziOAhTSpaerOI4CFNKlp6s4jgIU0
-        qWnqziOAhTSpaerOI4CFNKlp6s4jgIU0qWnqziOAhTSpaerOI4CFNKlp6s4jgIU0qWnqziOAhTSpaerO
-        I4CFNKlp6s4jgIU0qWnqziOAhTSpaerOI4CFNKlp6s4jgIU0qWnqziOAhTSpaerOI4CFNKlp6s4jgIU0
-        qWnqziOAhTSpaerOI4CFNKlp6s4jgIU0qWnqziOAhTSpaerOI4CFNKlp6s4jgIU0qWnqziOAhTSpaerO
-        I4CFNKlp6s4jgIU0qWnqziOAhTSpaerOI4CFNKlp6s4jgIU0qWnqziOAhTSpaerOI4CFNKlp6s4jgIU0
-        qWnqziOAhTSpaeo+f/x9AqylSWZm77rH4xvry96fnjfclAAAAABJRU5ErkJggg==
-</value>
-  </data>
   <data name="bunifuLabel3.BaseStylesheet" xml:space="preserve">
     <value>#bunifu-label { padding: 0px; font-family: 'Candara'; font-size: 12pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: underline; color: rgb(160, 160, 160); text-align: left; }</value>
   </data>
@@ -5589,9 +5575,23 @@
         SUVORK5CYII=
 </value>
   </data>
-  <metadata name="Validation.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>160, 17</value>
+  <metadata name="timer1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>248, 14</value>
   </metadata>
+  <data name="OnlineID.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAASgAAAA3CAYAAAC/8NfjAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHfSURBVHhe7dSxTQRQEEPBuwqu/9oogwIAy0C0uS8YS6Mv
+        fW38HmZmb73n8/nx83wBvIPfJv3v6/V6AbyFNKlp6s4jgIU0qWnqziOAhTSpaerOI4CFNKlp6s4jgIU0
+        qWnqziOAhTSpaerOI4CFNKlp6s4jgIU0qWnqziOAhTSpaerOI4CFNKlp6s4jgIU0qWnqziOAhTSpaerO
+        I4CFNKlp6s4jgIU0qWnqziOAhTSpaerOI4CFNKlp6s4jgIU0qWnqziOAhTSpaerOI4CFNKlp6s4jgIU0
+        qWnqziOAhTSpaerOI4CFNKlp6s4jgIU0qWnqziOAhTSpaerOI4CFNKlp6s4jgIU0qWnqziOAhTSpaerO
+        I4CFNKlp6s4jgIU0qWnqziOAhTSpaerOI4CFNKlp6s4jgIU0qWnqziOAhTSpaerOI4CFNKlp6s4jgIU0
+        qWnqziOAhTSpaerOI4CFNKlp6s4jgIU0qWnqziOAhTSpaerOI4CFNKlp6s4jgIU0qWnqziOAhTSpaerO
+        I4CFNKlp6s4jgIU0qWnqziOAhTSpaerOI4CFNKlp6s4jgIU0qWnqziOAhTSpaerOI4CFNKlp6s4jgIU0
+        qWnqziOAhTSpaeo+f/x9AqylSWZm77rH4xvry96fnjfclAAAAABJRU5ErkJggg==
+</value>
+  </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAEAICAAAAEAIACoEAAAFgAAACgAAAAgAAAAQAAAAAEAIAAAAAAAABAAAAAAAAAAAAAAAAAAAAAA
