@@ -42,10 +42,8 @@ namespace Gammis
                     Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Information, 1000, "",
                     Bunifu.UI.WinForms.BunifuSnackbar.Positions.BottomLeft,
                     Bunifu.UI.WinForms.BunifuSnackbar.Hosts.FormOwner);
-               
-                return;
             }
-
+            return;
         }
 
         [Obsolete]
@@ -86,7 +84,7 @@ namespace Gammis
                 string refcode = "";
                 refcode = OnlineID.Text;
                 bool isRefCodeAuthenticated = authHelper.RefCodeAuthenticate(refcode);
-                if (isRefCodeAuthenticated)
+                if (isRefCodeAuthenticated) 
                 {
                     bunifuSnackbar1.Show(this, "Valid Online ID!",
                         Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Success, 1000, "",
@@ -95,16 +93,26 @@ namespace Gammis
 
                     WaitingMessage.ForeColor = Color.LightYellow;
                     WaitingMessage.Text = "Authentication Inprocess!";
+                    SubmitAccount.Visible = false;
                     LoginFailed.Visible = false;
                     LoginSuccess.Visible = true;
                     LoginSuccess.ForeColor = Color.LightYellow;
                 }
 
+
                 else
                 {
-                    WaitingMessage.ForeColor = Color.Red;
-                    WaitingMessage.Text = "Something went wrong!";
+                    bunifuSnackbar1.Show(this, "Invalid Online ID!",
+                        Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Error, 1000, "",
+                        Bunifu.UI.WinForms.BunifuSnackbar.Positions.BottomLeft,
+                        Bunifu.UI.WinForms.BunifuSnackbar.Hosts.FormOwner);
+
+                    WaitingMessage.ForeColor = Color.LightPink;
+                    WaitingMessage.Text = "Authentication Failed!";
                     SubmitAccount.Visible = false;
+                    LoginFailed.Visible = true;
+                    LoginSuccess.Visible = false;
+                    LoginFailed.ForeColor = Color.LightPink;
                 }
             }
             catch (Exception ex)
