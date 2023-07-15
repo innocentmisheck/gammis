@@ -1,6 +1,5 @@
 ﻿using Bunifu.UI.WinForms;
 using gammis;
-using gammis.Routes;
 using Gammis.Helpers;
 using ServiceStack;
 using System;
@@ -42,8 +41,42 @@ namespace Gammis
                     Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Information, 1000, "",
                     Bunifu.UI.WinForms.BunifuSnackbar.Positions.BottomLeft,
                     Bunifu.UI.WinForms.BunifuSnackbar.Hosts.FormOwner);
+                return;
             }
-            return;
+
+            try
+            {
+                string username = "";
+                string password = "";
+                username = OnlineID.Text;
+                password = Passcode.Text;
+                bool isUserAuthenticated = authHelper.Authenticate(username, password);
+                if (isUserAuthenticated)
+                {
+                    Dashboard Monitor = new Dashboard();
+                    Monitor.Show();
+                    this.Close();
+                }
+                else
+                {
+                    WaitingMessage.ForeColor = Color.LightPink;
+                    WaitingMessage.Text = "Authentication Failed!";
+                    SubmitAccount.Visible = false;
+                    LoginFailed.Visible = true;
+                    LoginSuccess.Visible = false;
+                    LoginFailed.ForeColor = Color.LightPink;
+                    LoginButton.Text = "SOMETHING WENT WRONG";
+                    bunifuSnackbar1.Show(this, "Authentication Failed, Try Again Later!",
+                        Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Error, 1000, "",
+                        Bunifu.UI.WinForms.BunifuSnackbar.Positions.BottomLeft,
+                        Bunifu.UI.WinForms.BunifuSnackbar.Hosts.FormOwner);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(this, ex.ToString());
+            }
+
         }
 
         [Obsolete]
@@ -84,35 +117,36 @@ namespace Gammis
                 string refcode = "";
                 refcode = OnlineID.Text;
                 bool isRefCodeAuthenticated = authHelper.RefCodeAuthenticate(refcode);
+               
                 if (isRefCodeAuthenticated) 
                 {
+                    LoginButton.Enabled = true;
                     bunifuSnackbar1.Show(this, "Valid Online ID!",
-                        Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Success, 1000, "",
-                        Bunifu.UI.WinForms.BunifuSnackbar.Positions.TopCenter,
+                        Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Success, 3000, "",
+                        Bunifu.UI.WinForms.BunifuSnackbar.Positions.BottomLeft,
                         Bunifu.UI.WinForms.BunifuSnackbar.Hosts.FormOwner);
 
-                    WaitingMessage.ForeColor = Color.LightYellow;
+                    WaitingMessage.ForeColor = Color.ForestGreen;
                     WaitingMessage.Text = "Authentication Inprocess!";
                     SubmitAccount.Visible = false;
                     LoginFailed.Visible = false;
                     LoginSuccess.Visible = true;
-                    LoginSuccess.ForeColor = Color.LightYellow;
+                    LoginButton.Text = "ENTER PASSCODE";
+
                 }
 
 
                 else
                 {
-                    bunifuSnackbar1.Show(this, "Invalid Online ID!",
-                        Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Error, 1000, "",
-                        Bunifu.UI.WinForms.BunifuSnackbar.Positions.BottomLeft,
-                        Bunifu.UI.WinForms.BunifuSnackbar.Hosts.FormOwner);
-
+                    LoginButton.Enabled = false;
                     WaitingMessage.ForeColor = Color.LightPink;
-                    WaitingMessage.Text = "Authentication Failed!";
+                    WaitingMessage.Text = "Invalid Online ID!";
                     SubmitAccount.Visible = false;
                     LoginFailed.Visible = true;
                     LoginSuccess.Visible = false;
                     LoginFailed.ForeColor = Color.LightPink;
+                    LoginButton.Text = "SOMETHING WENT WRONG";
+
                 }
             }
             catch (Exception ex)
@@ -121,6 +155,56 @@ namespace Gammis
             }
 
         }
+
+        private void Passcode_KeyUp(object sender, KeyEventArgs e)
+        {
+                try
+                {
+                    string passcode = "";
+                    passcode = Passcode.Text;
+                    bool isPasscodeAuthenticated = authHelper.PasscodeAuthenticate(passcode);
+                    if (isPasscodeAuthenticated)
+                    {
+                        LoginButton.Enabled=true;
+                        bunifuSnackbar1.Show(this, "Valid ID Passcode!",
+                            Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Success, 3000, "",
+                            Bunifu.UI.WinForms.BunifuSnackbar.Positions.BottomLeft,
+                            Bunifu.UI.WinForms.BunifuSnackbar.Hosts.FormOwner);
+                        bunifuSnackbar1.Show(this, "Submit Account Now!",
+                            Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Information, 3000, "",
+                            Bunifu.UI.WinForms.BunifuSnackbar.Positions.BottomLeft,
+                            Bunifu.UI.WinForms.BunifuSnackbar.Hosts.FormOwner);
+
+                    WaitingMessage.ForeColor = Color.ForestGreen;
+                        WaitingMessage.Text = "Authentication Inprocess!";
+                        SubmitAccount.Visible = false;
+                        LoginFailed.Visible = false;
+                        LoginSuccess.Visible = true;
+                        LoginSuccess.ForeColor = Color.ForestGreen;
+                        LoginButton.Text = "SUBMIT ACCOUNT";
+                    }
+
+
+                    else
+                    {
+                    LoginButton.Enabled = false;
+                        WaitingMessage.ForeColor = Color.LightPink;
+                        WaitingMessage.Text = "Invalid ID Passcode!";
+                        SubmitAccount.Visible = false;
+                        LoginFailed.Visible = true;
+                        LoginSuccess.Visible = false;
+                        LoginFailed.ForeColor = Color.LightPink;
+                        LoginButton.Text = "SOMETHING WENT WRONG";
+                     }
+            }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(this, ex.ToString());
+                }
+        }
+
+
+        
     }
 }
 

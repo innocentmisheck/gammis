@@ -14,7 +14,10 @@ namespace Gammis.Helpers
 
         public bool Authenticate(string username, string password)
         {
-            return security.IDAuthentication(username, password);
+            return
+            security.IDAuthentication(username, password);
+            
+    
         }
         [Obsolete("Use newMethod instead", false)]
 
@@ -27,5 +30,13 @@ namespace Gammis.Helpers
         {
             return security.RefCodeAuthentication(refCode);
         }
+
+        public bool PasscodeAuthenticate(string Passcode)
+        {
+            return security.PasscodeAuthentication(Passcode);
+        }
+
+
+
     }
 }

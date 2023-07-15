@@ -368,7 +368,6 @@
   <ItemGroup>
     <Compile Include="Controllers\Authentication.cs" />
     <Compile Include="Routes\GamingPanelRoute.cs" />
-    <Compile Include="Routes\GetDashboardRoute.cs" />
     <Compile Include="Routes\HomePanelRoute.cs" />
     <Compile Include="View\Dashboard.cs">
       <SubType>Form</SubType>

@@ -328,6 +328,7 @@
             this.Passcode.UseSystemPasswordChar = false;
             this.Passcode.WordWrap = true;
             this.Passcode.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Passcode_KeyPress);
+            this.Passcode.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Passcode_KeyUp);
             this.Passcode.Leave += new System.EventHandler(this.Passcode_Leave);
             // 
             // bunifuLabel5
@@ -377,7 +378,7 @@
             this.LoginButton.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(90)))), ((int)(((byte)(200)))));
             this.LoginButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("LoginButton.BackgroundImage")));
             this.LoginButton.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
-            this.LoginButton.ButtonText = "SUBMIT  ACCOUNT";
+            this.LoginButton.ButtonText = "ACCOUNT AUTHENTICATED";
             this.LoginButton.ButtonTextMarginLeft = 0;
             this.LoginButton.ColorContrastOnClick = 45;
             this.LoginButton.ColorContrastOnHover = 45;
@@ -392,7 +393,7 @@
             this.LoginButton.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.LoginButton.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
             this.LoginButton.Enabled = false;
-            this.LoginButton.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.ButtonStates.Pressed;
+            this.LoginButton.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.ButtonStates.Disabled;
             this.LoginButton.Font = new System.Drawing.Font("Candara", 15F, System.Drawing.FontStyle.Bold);
             this.LoginButton.ForeColor = System.Drawing.Color.White;
             this.LoginButton.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -457,8 +458,9 @@
             // LoginSuccess
             // 
             this.LoginSuccess.BackColor = System.Drawing.Color.Transparent;
-            this.LoginSuccess.IconChar = FontAwesome.Sharp.IconChar.FileCircleExclamation;
-            this.LoginSuccess.IconColor = System.Drawing.Color.White;
+            this.LoginSuccess.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.LoginSuccess.IconChar = FontAwesome.Sharp.IconChar.FileCircleCheck;
+            this.LoginSuccess.IconColor = System.Drawing.SystemColors.Highlight;
             this.LoginSuccess.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.LoginSuccess.IconSize = 48;
             this.LoginSuccess.Location = new System.Drawing.Point(336, 416);

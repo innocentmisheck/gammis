@@ -63,5 +63,29 @@ namespace Gammis
             }
         }
 
+        public bool PasscodeAuthentication(string Passcode)
+        {
+            MySqlCommand command = new MySqlCommand("SELECT password FROM tbl_staff_access WHERE password = @passcode;", IDconnection.GetConnection);
+            command.Parameters.Add("@passcode", MySqlDbType.VarChar).Value = Passcode;
+            IDconnection.OpenConnect();
+            MySqlDataReader reader = command.ExecuteReader();
+
+            int result = 0;
+            while (reader.Read())
+            {
+                result++;
+            }
+            if (result == 1)
+            {
+                IDconnection.CloseConnect();
+                return true;
+            }
+            else
+            {
+                IDconnection.CloseConnect();
+                return false;
+            }
+        }
+
     }
 }
