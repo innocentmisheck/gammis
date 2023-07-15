@@ -79,13 +79,18 @@ namespace Gammis
 
         private void Home_Click(object sender, EventArgs e)
         {
+            ResetIconColors();
+            HomePanelIcon.ForeColor = Color.DodgerBlue;
             Routes.HomePanelRoute.GoToHomePanel(bunifuPages1);
             AdsPanel.Visible = true;
             OperationsBar.Visible = false;
+            return;
         }
 
         private void Gaming_Click(object sender, EventArgs e)
         {
+            ResetIconColors();
+            Gaming2.ForeColor = Color.DodgerBlue;
             AdsPanel.Visible = false;
             OperationsBar.Visible = true;
             Routes.GamingPanelRoute.GoToGamingPanel(bunifuPages1);
@@ -335,5 +340,35 @@ namespace Gammis
         {
 
         }
+
+
+
+
+        private void ResetIconColors()
+        {
+            // Replace with the default color 
+            Perfomance2.ForeColor = Color.White;
+            HomePanelIcon.ForeColor = Color.White; 
+            Gaming2.ForeColor = Color.White;
+            GamersPanel2.ForeColor = Color.White;
+            FinancialControl2.ForeColor = Color.White;
+        }
+
+
+        private void UserProfile_MouseHover(object sender, EventArgs e)
+        {
+            UserProfile.IconColor = Color.DodgerBlue;
+            UserProfileQuickPanel.Visible = true;
+            return;
+        }
+
+        private void UserProfile_MouseLeave(object sender, EventArgs e)
+        {
+            UserProfile.IconColor = Color.White;
+            UserProfileQuickPanel.Visible = false;
+            return;
+        }
+
+       
     }
 }
